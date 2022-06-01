@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    <a href= "edit/" style="color:black; background-color: #f0f0f0; float:right; margin-right: 40px; padding: 8px; border-style: ridge; ">
+        EDIT PAGE
+    </a>
+    {{ content | safe }}
+    
+{% endblock %}
