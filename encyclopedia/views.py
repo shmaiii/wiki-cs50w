@@ -52,7 +52,7 @@ def search(request):
         if form.is_valid():
             query = form.cleaned_data["searchEntry"]
             if query in util.list_entries():
-                return wiki(request, query)
+                return HttpResponseRedirect(reverse('wiki', kwargs={"title": query}))
                 #return HttpResponseRedirect(f"wiki/{query}")
             else: 
                 entriesPresent = []
